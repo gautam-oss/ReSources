@@ -1,0 +1,1354 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Python Programming - Student Study Guide</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@1/css/pico.min.css">
+    <style>
+      body {
+        max-width: 880px;
+        margin: 0 auto;
+        padding: 40px 80px;
+        font-family: 'Arial', 'Helvetica', sans-serif;
+        color: #000000;
+        background-color: #ffffff;
+        line-height: 1.6;
+      }
+
+      h1, h2, h3, h4, h5, h6 {
+        color: #2e4053;
+        margin-bottom: 0.5rem;
+        font-family: 'Arial', sans-serif;
+      }
+
+      h1 {
+        font-size: 24pt;
+        border-bottom: 3px solid #2e4053;
+        padding-bottom: 10px;
+        text-align: center;
+        margin-top: 0;
+        color: #1a5490;
+      }
+
+      h2 {
+        font-size: 16pt;
+        color: #1f618d;
+        margin-top: 30px;
+        border-bottom: 2px solid #d6dbdf;
+        padding-bottom: 5px;
+      }
+
+      h3 {
+        font-size: 13pt;
+        color: #283747;
+        margin-top: 20px;
+        font-weight: bold;
+      }
+
+      h4 {
+        font-size: 11pt;
+        color: #34495e;
+        margin-top: 15px;
+        font-weight: bold;
+      }
+
+      p, li {
+        font-size: 11pt;
+        text-align: justify;
+      }
+
+      ul, ol {
+        margin-bottom: 15px;
+        margin-left: 20px;
+      }
+
+      li {
+        margin-bottom: 8px;
+      }
+
+      .box {
+        border: 2px solid #3498db;
+        padding: 15px;
+        margin: 15px 0;
+        background-color: #ebf5fb;
+        border-radius: 5px;
+      }
+
+      .box-practice {
+        border: 2px solid #16a085;
+        background-color: #e8f8f5;
+      }
+
+      .box-example {
+        border: 2px solid #9b59b6;
+        background-color: #f4ecf7;
+      }
+
+      .box-remember {
+        border: 2px solid #e67e22;
+        background-color: #fef5e7;
+      }
+
+      .box-warning {
+        border: 2px solid #e74c3c;
+        background-color: #fadbd8;
+      }
+
+      .box-title {
+        font-weight: bold;
+        display: block;
+        margin-bottom: 10px;
+        font-size: 11pt;
+        color: #2c3e50;
+      }
+
+      pre {
+        background-color: #f4f6f7;
+        border: 1px solid #d5d8dc;
+        padding: 12px;
+        font-family: 'Consolas', 'Courier New', monospace;
+        font-size: 10pt;
+        overflow-x: auto;
+        white-space: pre-wrap;
+        border-radius: 4px;
+        margin: 10px 0;
+      }
+
+      code {
+        font-family: 'Consolas', 'Courier New', monospace;
+        background-color: #f4f6f7;
+        padding: 2px 6px;
+        border-radius: 3px;
+        font-size: 10pt;
+        color: #c0392b;
+      }
+
+      .icon {
+        font-family: 'Segoe UI Emoji', sans-serif;
+        margin-right: 5px;
+      }
+
+      .meta-header {
+        text-align: center;
+        font-size: 12pt;
+        color: #566573;
+        margin-bottom: 40px;
+        font-style: italic;
+      }
+
+      table {
+        width: 100%;
+        border-collapse: collapse;
+        margin: 20px 0;
+        font-size: 10pt;
+      }
+
+      th, td {
+        border: 1px solid #000;
+        padding: 10px;
+        text-align: left;
+      }
+
+      th {
+        background-color: #3498db;
+        color: white;
+        font-weight: bold;
+      }
+
+      tr:nth-child(even) {
+        background-color: #f2f2f2;
+      }
+
+      .summary-box {
+        border: 3px solid #2c3e50;
+        background-color: #ecf0f1;
+        padding: 20px;
+        margin: 30px 0;
+      }
+    </style>
+</head>
+<body>
+    <h1>🐍 Python Programming - Student Study Guide</h1>
+    <div class="meta-header">Your Complete Reference for Learning Python · Practice & Master</div>
+
+    <!-- Part 1 -->
+    <h2><span class="icon">🚀</span>Part 1: Getting Started with Python</h2>
+
+    <h3>What You'll Learn</h3>
+    <p>
+      In this section, you'll set up your computer to write and run Python programs. Think of this as preparing your workspace before starting a project.
+    </p>
+
+    <h3>Setting Up Your Python Environment</h3>
+    
+    <h4>Step 1: Install Python</h4>
+    <ol>
+      <li>Go to <strong>python.org</strong> and download the latest version of Python</li>
+      <li><strong>⚠️ IMPORTANT:</strong> When installing, make sure to check the box that says <strong>"Add Python to PATH"</strong></li>
+      <li>Complete the installation</li>
+    </ol>
+
+    <h4>Step 2: Verify Installation</h4>
+    <p>Open your terminal (Command Prompt on Windows, Terminal on Mac/Linux) and type:</p>
+    <pre>python --version</pre>
+    <p>You should see something like: <code>Python 3.12.0</code></p>
+
+    <h4>Step 3: Choose a Code Editor</h4>
+    <p><strong>Recommended:</strong> Visual Studio Code (VS Code)</p>
+    <ul>
+      <li>Free and beginner-friendly</li>
+      <li>Download from: code.visualstudio.com</li>
+      <li>Install the Python extension</li>
+    </ul>
+
+    <div class="box box-practice">
+      <span class="box-title">✅ Your First Python Program</span>
+      <ol>
+        <li>Create a new file called <code>hello.py</code></li>
+        <li>Type the following code:</li>
+      </ol>
+      <pre>print("Hello, Python!")</pre>
+      <p>Save the file and run it. You should see <strong>Hello, Python!</strong> displayed on your screen!</p>
+    </div>
+
+    <!-- Part 2 -->
+    <h2><span class="icon">🧠</span>Part 2: Understanding How Python Works</h2>
+
+    <h3>How Do Computers Understand Code?</h3>
+    <p>
+      Computers only understand <strong>machine code</strong> (0s and 1s). Humans write in <strong>high-level languages</strong> like Python that are easier to read. Python uses an <strong>interpreter</strong> to translate your code into machine code.
+    </p>
+
+    <div class="box box-example">
+      <span class="box-title">💡 Think of it Like This</span>
+      <p>Imagine you're writing a letter to a friend in another country who speaks a different language:</p>
+      <ul>
+        <li><strong>You write in English</strong> (your Python code)</li>
+        <li><strong>A translator converts it line by line</strong> (the Python interpreter)</li>
+        <li><strong>Your friend reads it in their language</strong> (machine code the computer understands)</li>
+      </ul>
+      <p><strong>Compiler vs Interpreter:</strong></p>
+      <ul>
+        <li><strong>Compiler (C++, Java):</strong> Translates the entire program at once, like translating a whole book before publishing</li>
+        <li><strong>Interpreter (Python):</strong> Translates line by line as the program runs, like a live translator sitting next to you</li>
+      </ul>
+    </div>
+
+    <h3>Why Learn Python?</h3>
+    <ul>
+      <li>✅ <strong>Easy to Read:</strong> Python code looks almost like English sentences</li>
+      <li>✅ <strong>Beginner Friendly:</strong> Less confusing rules compared to other languages</li>
+      <li>✅ <strong>Powerful:</strong> Used for web development, data science, AI, automation, and more</li>
+      <li>✅ <strong>In Demand:</strong> Many companies hire Python developers</li>
+    </ul>
+
+    <!-- Part 3 -->
+    <h2><span class="icon">🧱</span>Part 3: Python Fundamentals</h2>
+
+    <h3>1. Printing Output</h3>
+    <p>The <code>print()</code> function displays text on your screen:</p>
+    <pre># Basic print
+print("Hello World")
+
+# Print multiple things
+print("Hello", "World")
+
+# Custom separator
+print("Hello", "World", sep="-")
+# Output: Hello-World
+
+# Custom ending
+print("Hello", end="!")
+print("World")
+# Output: Hello!World</pre>
+
+    <h3>2. Getting User Input</h3>
+    <p>The <code>input()</code> function lets users type information:</p>
+    <pre>name = input("What is your name? ")
+print("Hello,", name)</pre>
+
+    <div class="box box-remember">
+      <span class="box-title">📌 Remember</span>
+      <p><code>input()</code> ALWAYS returns text (a string), even if the user types a number!</p>
+      <pre># To get a number, you must convert it:
+age = int(input("How old are you? "))
+# Now age is a number, not text</pre>
+    </div>
+
+    <h3>3. Understanding Errors</h3>
+    <p>Everyone makes mistakes! Python has two main types of errors:</p>
+    
+    <h4>Syntax Error</h4>
+    <p>Like a grammar mistake - your code won't run at all.</p>
+    <pre># ERROR - Missing closing quote
+print("Hello)
+
+# CORRECT
+print("Hello")</pre>
+
+    <h4>Runtime Error</h4>
+    <p>The code starts running but crashes during execution.</p>
+    <pre># ERROR - Can't divide by zero
+result = 10 / 0
+
+# CORRECT - Check before dividing
+divisor = 0
+if divisor != 0:
+    result = 10 / divisor
+else:
+    print("Cannot divide by zero!")</pre>
+
+    <h3>4. Variables and Data Types</h3>
+    <p>Variables are like labeled containers that store information. Think of them as <strong>name tags</strong> attached to values, not boxes!</p>
+
+    <h4>Common Data Types:</h4>
+    <table>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+        <th>Example</th>
+      </tr>
+      <tr>
+        <td><code>int</code></td>
+        <td>Whole numbers</td>
+        <td><code>age = 15</code></td>
+      </tr>
+      <tr>
+        <td><code>float</code></td>
+        <td>Decimal numbers</td>
+        <td><code>price = 19.99</code></td>
+      </tr>
+      <tr>
+        <td><code>str</code></td>
+        <td>Text (strings)</td>
+        <td><code>name = "Alex"</code></td>
+      </tr>
+      <tr>
+        <td><code>bool</code></td>
+        <td>True or False</td>
+        <td><code>is_student = True</code></td>
+      </tr>
+    </table>
+
+    <div class="box box-example">
+      <span class="box-title">🔍 Example: Variables in Action</span>
+      <pre># Variables can change their type!
+x = 10           # x is an integer
+print(x)         # Output: 10
+
+x = "Hello"      # Now x is a string
+print(x)         # Output: Hello
+
+x = 3.14         # Now x is a float
+print(x)         # Output: 3.14
+
+# This is called Dynamic Typing!</pre>
+    </div>
+
+    <div class="box box-practice">
+      <span class="box-title">✏️ Practice Exercise 1</span>
+      <p>Write a program that:</p>
+      <ol>
+        <li>Asks the user for their name</li>
+        <li>Asks the user for their age</li>
+        <li>Calculates what year they were born (2026 - age)</li>
+        <li>Prints: "Hello [name], you were born in [year]!"</li>
+      </ol>
+    </div>
+
+    <!-- Part 4 -->
+    <h2><span class="icon">🧵</span>Part 4: Working with Text and Math</h2>
+
+    <h3>1. Math Operators</h3>
+    <table>
+      <tr>
+        <th>Operator</th>
+        <th>Name</th>
+        <th>Example</th>
+        <th>Result</th>
+      </tr>
+      <tr>
+        <td><code>+</code></td>
+        <td>Addition</td>
+        <td><code>5 + 3</code></td>
+        <td><code>8</code></td>
+      </tr>
+      <tr>
+        <td><code>-</code></td>
+        <td>Subtraction</td>
+        <td><code>5 - 3</code></td>
+        <td><code>2</code></td>
+      </tr>
+      <tr>
+        <td><code>*</code></td>
+        <td>Multiplication</td>
+        <td><code>5 * 3</code></td>
+        <td><code>15</code></td>
+      </tr>
+      <tr>
+        <td><code>/</code></td>
+        <td>Division</td>
+        <td><code>5 / 2</code></td>
+        <td><code>2.5</code></td>
+      </tr>
+      <tr>
+        <td><code>//</code></td>
+        <td>Floor Division</td>
+        <td><code>5 // 2</code></td>
+        <td><code>2</code></td>
+      </tr>
+      <tr>
+        <td><code>%</code></td>
+        <td>Modulus (Remainder)</td>
+        <td><code>5 % 2</code></td>
+        <td><code>1</code></td>
+      </tr>
+      <tr>
+        <td><code>**</code></td>
+        <td>Power</td>
+        <td><code>5 ** 2</code></td>
+        <td><code>25</code></td>
+      </tr>
+    </table>
+
+    <h3>2. Comparison Operators</h3>
+    <p>These compare values and return <code>True</code> or <code>False</code>:</p>
+    <pre>x = 10
+y = 5
+
+print(x > y)    # True (10 is greater than 5)
+print(x < y)    # False (10 is not less than 5)
+print(x == y)   # False (10 is not equal to 5)
+print(x != y)   # True (10 is not equal to 5)
+print(x >= 10)  # True (10 is greater than or equal to 10)
+print(x <= 5)   # False (10 is not less than or equal to 5)</pre>
+
+    <div class="box box-warning">
+      <span class="box-title">⚠️ Common Mistake</span>
+      <p>Don't confuse <code>=</code> with <code>==</code></p>
+      <ul>
+        <li><code>x = 5</code> → Assigns the value 5 to x</li>
+        <li><code>x == 5</code> → Checks if x equals 5 (returns True or False)</li>
+      </ul>
+    </div>
+
+    <h3>3. Logical Operators</h3>
+    <p>Combine multiple conditions:</p>
+    <pre>age = 16
+has_license = True
+
+# AND - both conditions must be True
+can_drive = (age >= 16) and has_license
+print(can_drive)  # True
+
+# OR - at least one condition must be True
+is_weekend = True
+is_holiday = False
+can_sleep_in = is_weekend or is_holiday
+print(can_sleep_in)  # True
+
+# NOT - reverses the result
+is_weekday = not is_weekend
+print(is_weekday)  # False</pre>
+
+    <h3>4. Working with Strings</h3>
+    <p>Strings are sequences of characters. Each character has a position (index) starting from 0.</p>
+
+    <h4>String Indexing:</h4>
+    <pre>text = "Python"
+#       012345  (positive index)
+#      -654321  (negative index)
+
+print(text[0])    # P (first character)
+print(text[5])    # n (last character)
+print(text[-1])   # n (last character using negative index)
+print(text[-2])   # o (second to last)</pre>
+
+    <h4>String Slicing:</h4>
+    <p>Get a portion of a string using <code>[start:stop:step]</code></p>
+    <pre>text = "Python Programming"
+
+print(text[0:6])      # Python (characters 0 to 5)
+print(text[7:])       # Programming (from 7 to end)
+print(text[:6])       # Python (from start to 5)
+print(text[::2])      # Pto rgamn (every 2nd character)
+print(text[::-1])     # gnimmargorP nohtyP (reversed!)</pre>
+
+    <div class="box box-remember">
+      <span class="box-title">📌 Important Rule</span>
+      <p>In slicing, the <code>stop</code> index is <strong>not included</strong>. <code>text[0:6]</code> gets characters 0, 1, 2, 3, 4, 5 (but NOT 6).</p>
+    </div>
+
+    <h4>String Methods:</h4>
+    <pre>text = "hello world"
+
+print(text.upper())       # HELLO WORLD
+print(text.lower())       # hello world
+print(text.capitalize())  # Hello world
+print(text.title())       # Hello World
+print(text.replace("world", "Python"))  # hello Python
+print(text.split())       # ['hello', 'world']
+print(len(text))          # 11 (length of string)</pre>
+
+    <h4>String Formatting:</h4>
+    <p>The modern way to insert variables into strings uses <strong>f-strings</strong>:</p>
+    <pre>name = "Sarah"
+age = 16
+score = 95.5
+
+# F-string (recommended - Python 3.6+)
+message = f"Hi, I'm {name}. I'm {age} years old and scored {score}%"
+print(message)
+# Output: Hi, I'm Sarah. I'm 16 years old and scored 95.5%
+
+# You can even do calculations inside f-strings!
+print(f"In 5 years, I'll be {age + 5} years old")</pre>
+
+    <div class="box box-practice">
+      <span class="box-title">✏️ Practice Exercise 2</span>
+      <p>Write a program that:</p>
+      <ol>
+        <li>Takes a sentence from the user</li>
+        <li>Prints the sentence in reverse</li>
+        <li>Prints the first and last character</li>
+        <li>Counts and prints how many characters are in the sentence (use <code>len()</code>)</li>
+        <li>Converts the sentence to uppercase</li>
+      </ol>
+    </div>
+
+    <!-- Part 5 -->
+    <h2><span class="icon">🔀</span>Part 5: Making Decisions and Repeating Actions</h2>
+
+    <h3>1. If Statements (Making Decisions)</h3>
+    <p>Your program can make choices based on conditions:</p>
+    <pre>age = int(input("Enter your age: "))
+
+if age >= 18:
+    print("You are an adult")
+    print("You can vote!")
+elif age >= 13:
+    print("You are a teenager")
+else:
+    print("You are a child")
+    
+# This line always runs (not indented)
+print("Thanks for using the program!")</pre>
+
+    <div class="box box-remember">
+      <span class="box-title">📌 Indentation is Critical!</span>
+      <p>Python uses spaces (indentation) to define code blocks. Use 4 spaces (or one Tab). All code inside an <code>if</code> statement must be indented the same amount.</p>
+      <pre># WRONG - Indentation error
+if age >= 18:
+print("Adult")  # Error! Not indented
+
+# CORRECT
+if age >= 18:
+    print("Adult")  # Properly indented with 4 spaces</pre>
+    </div>
+
+    <h4>Nested If Statements:</h4>
+    <pre>score = 85
+
+if score >= 60:
+    print("You passed!")
+    if score >= 90:
+        print("Excellent! A grade")
+    elif score >= 80:
+        print("Great! B grade")
+    else:
+        print("Good! C grade")
+else:
+    print("You failed. Try again!")</pre>
+
+    <h3>2. While Loops (Repeat While Condition is True)</h3>
+    <p>Keeps running as long as a condition is <code>True</code>:</p>
+    <pre>count = 1
+while count <= 5:
+    print(f"Count is: {count}")
+    count = count + 1  # Same as: count += 1
+
+print("Loop finished!")
+
+# Output:
+# Count is: 1
+# Count is: 2
+# Count is: 3
+# Count is: 4
+# Count is: 5
+# Loop finished!</pre>
+
+    <div class="box box-warning">
+      <span class="box-title">⚠️ Watch Out for Infinite Loops!</span>
+      <p>If your condition never becomes <code>False</code>, the loop will run forever!</p>
+      <pre># BAD - This will run forever!
+count = 1
+while count <= 5:
+    print(count)
+    # Forgot to add: count += 1
+    
+# To stop an infinite loop, press Ctrl+C</pre>
+    </div>
+
+    <h3>3. For Loops (Repeat for Each Item)</h3>
+    <p>Repeats code for each item in a sequence:</p>
+    <pre># Loop through a range of numbers
+for i in range(5):
+    print(i)
+# Output: 0, 1, 2, 3, 4
+
+# Loop through a string
+for letter in "Python":
+    print(letter)
+# Output: P, y, t, h, o, n (each on new line)
+
+# Loop through a list
+fruits = ["apple", "banana", "cherry"]
+for fruit in fruits:
+    print(f"I like {fruit}")</pre>
+
+    <h4>The Range Function:</h4>
+    <pre># range(stop) - starts at 0
+for i in range(5):
+    print(i)  # 0, 1, 2, 3, 4
+
+# range(start, stop)
+for i in range(2, 6):
+    print(i)  # 2, 3, 4, 5
+
+# range(start, stop, step)
+for i in range(0, 10, 2):
+    print(i)  # 0, 2, 4, 6, 8
+
+# Countdown!
+for i in range(10, 0, -1):
+    print(i)  # 10, 9, 8, 7, 6, 5, 4, 3, 2, 1</pre>
+
+    <h3>4. Loop Control Keywords</h3>
+    <table>
+      <tr>
+        <th>Keyword</th>
+        <th>What It Does</th>
+        <th>Example Use</th>
+      </tr>
+      <tr>
+        <td><code>break</code></td>
+        <td>Exits the loop immediately</td>
+        <td>Stop searching when item is found</td>
+      </tr>
+      <tr>
+        <td><code>continue</code></td>
+        <td>Skips to next iteration</td>
+        <td>Skip processing certain numbers</td>
+      </tr>
+      <tr>
+        <td><code>pass</code></td>
+        <td>Does nothing (placeholder)</td>
+        <td>Save a spot for future code</td>
+      </tr>
+    </table>
+
+    <pre># Example using break
+for i in range(10):
+    if i == 5:
+        break  # Stop when i reaches 5
+    print(i)
+# Output: 0, 1, 2, 3, 4
+
+# Example using continue
+for i in range(5):
+    if i == 2:
+        continue  # Skip when i is 2
+    print(i)
+# Output: 0, 1, 3, 4
+
+# Example using pass
+for i in range(3):
+    if i == 1:
+        pass  # Do nothing, just continue
+    print(i)
+# Output: 0, 1, 2</pre>
+
+    <div class="box box-practice">
+      <span class="box-title">✏️ Practice Exercise 3</span>
+      <p>Write a program that:</p>
+      <ol>
+        <li>Asks the user to enter a number</li>
+        <li>Prints all numbers from 1 to that number</li>
+        <li>For each number, print whether it's even or odd</li>
+        <li>Bonus: Skip multiples of 5 using <code>continue</code></li>
+      </ol>
+      <p><strong>Hint:</strong> A number is even if <code>number % 2 == 0</code></p>
+    </div>
+
+    <!-- Part 6 -->
+    <h2><span class="icon">📦</span>Part 6: Organizing Data with Collections</h2>
+
+    <h3>Overview of Data Structures</h3>
+    <p>Python has four main built-in data structures for organizing collections of data:</p>
+
+    <table>
+      <tr>
+        <th>Type</th>
+        <th>Syntax</th>
+        <th>Ordered?</th>
+        <th>Changeable?</th>
+        <th>Duplicates?</th>
+        <th>Best For</th>
+      </tr>
+      <tr>
+        <td><strong>List</strong></td>
+        <td><code>[1, 2, 3]</code></td>
+        <td>✅ Yes</td>
+        <td>✅ Yes</td>
+        <td>✅ Yes</td>
+        <td>General collections, to-do lists</td>
+      </tr>
+      <tr>
+        <td><strong>Tuple</strong></td>
+        <td><code>(1, 2, 3)</code></td>
+        <td>✅ Yes</td>
+        <td>❌ No</td>
+        <td>✅ Yes</td>
+        <td>Fixed data (coordinates, dates)</td>
+      </tr>
+      <tr>
+        <td><strong>Set</strong></td>
+        <td><code>{1, 2, 3}</code></td>
+        <td>❌ No</td>
+        <td>✅ Yes</td>
+        <td>❌ No</td>
+        <td>Unique items, removing duplicates</td>
+      </tr>
+      <tr>
+        <td><strong>Dictionary</strong></td>
+        <td><code>{"a": 1}</code></td>
+        <td>✅ Yes</td>
+        <td>✅ Yes</td>
+        <td>Keys: ❌</td>
+        <td>Key-value pairs, phone book</td>
+      </tr>
+    </table>
+
+    <h3>1. Lists (Ordered, Changeable Collections)</h3>
+    <p>Lists can hold multiple items and can be modified:</p>
+    <pre># Creating a list
+fruits = ["apple", "banana", "cherry"]
+numbers = [1, 2, 3, 4, 5]
+mixed = [1, "hello", 3.14, True]  # Can mix types!
+
+# Accessing items (0-indexed)
+print(fruits[0])    # apple
+print(fruits[-1])   # cherry (last item)
+print(fruits[1:3])  # ['banana', 'cherry']
+
+# Modifying lists
+fruits.append("orange")      # Add to end: ['apple', 'banana', 'cherry', 'orange']
+fruits.insert(1, "mango")    # Insert at position 1
+fruits.remove("banana")      # Remove specific item
+last = fruits.pop()          # Remove and return last item
+fruits[0] = "pear"           # Change first item
+
+# Useful list methods
+print(len(fruits))           # Number of items
+print(fruits.count("apple")) # Count occurrences
+print(fruits.index("cherry"))# Find position
+
+# Sorting
+numbers = [5, 2, 8, 1, 9]
+numbers.sort()               # Sort in place: [1, 2, 5, 8, 9]
+numbers.reverse()            # Reverse: [9, 8, 5, 2, 1]
+
+# List comprehension (advanced)
+squares = [x**2 for x in range(5)]
+print(squares)  # [0, 1, 4, 9, 16]</pre>
+
+    <h3>2. Tuples (Ordered, Unchangeable Collections)</h3>
+    <p>Like lists, but cannot be modified after creation - they're <strong>immutable</strong>:</p>
+    <pre># Creating a tuple
+coordinates = (10, 20)
+rgb_color = (255, 128, 0)
+person = ("Alice", 16, "10th grade")
+
+# Accessing items (same as lists)
+print(coordinates[0])   # 10
+print(person[1])        # 16
+
+# Tuples are useful for data that shouldn't change
+# Example: GPS coordinates, date (year, month, day)
+birthday = (2008, 5, 15)  # May 15, 2008
+
+# You CAN'T do this with tuples:
+# coordinates[0] = 20  # ERROR! Tuples are immutable
+
+# Unpacking tuples
+x, y = coordinates
+print(f"X: {x}, Y: {y}")  # X: 10, Y: 20</pre>
+
+    <h3>3. Sets (Unordered, Unique Items)</h3>
+    <p>Collections that automatically remove duplicates:</p>
+    <pre># Creating a set
+numbers = {1, 2, 3, 4, 5}
+unique_numbers = {1, 2, 2, 3, 3, 3}
+print(unique_numbers)  # {1, 2, 3} - duplicates removed!
+
+# Converting list to set (removes duplicates)
+my_list = [1, 2, 2, 3, 3, 3, 4]
+my_set = set(my_list)
+print(my_set)  # {1, 2, 3, 4}
+
+# Set operations
+set1 = {1, 2, 3, 4}
+set2 = {3, 4, 5, 6}
+
+print(set1.union(set2))         # {1, 2, 3, 4, 5, 6} - all items
+print(set1.intersection(set2))  # {3, 4} - common items
+print(set1.difference(set2))    # {1, 2} - in set1 but not set2
+
+# Adding and removing
+set1.add(5)         # Add item
+set1.remove(1)      # Remove item (error if not found)
+set1.discard(10)    # Remove item (no error if not found)</pre>
+
+    <h3>4. Dictionaries (Key-Value Pairs)</h3>
+    <p>Store data with labels (keys) for easy lookup - like a real dictionary or phone book:</p>
+    <pre># Creating a dictionary
+student = {
+    "name": "Alice",
+    "age": 16,
+    "grade": "10th",
+    "gpa": 3.8
+}
+
+# Accessing values
+print(student["name"])        # Alice
+print(student.get("age"))     # 16 (safer method)
+print(student.get("email"))   # None (doesn't error if key missing)
+
+# Modifying dictionary
+student["gpa"] = 3.9          # Change value
+student["email"] = "alice@example.com"  # Add new key-value pair
+del student["age"]            # Delete a key
+
+# Useful dictionary methods
+print(student.keys())         # All keys: dict_keys(['name', 'grade', 'gpa', 'email'])
+print(student.values())       # All values
+print(student.items())        # All key-value pairs
+
+# Check if key exists
+if "name" in student:
+    print("Name exists!")
+
+# Loop through dictionary
+for key in student:
+    print(f"{key}: {student[key]}")
+
+# Better way to loop
+for key, value in student.items():
+    print(f"{key}: {value}")
+
+# Dictionary comprehension (advanced)
+squares = {x: x**2 for x in range(5)}
+print(squares)  # {0: 0, 1: 1, 2: 4, 3: 9, 4: 16}</pre>
+
+    <div class="box box-example">
+      <span class="box-title">💡 Real-World Example: Phone Book</span>
+      <pre>phonebook = {
+    "Mom": "555-1234",
+    "Dad": "555-5678",
+    "Best Friend": "555-9999"
+}
+
+# Look up a number
+contact = input("Who do you want to call? ")
+if contact in phonebook:
+    print(f"Calling {contact} at {phonebook[contact]}")
+else:
+    print("Contact not found!")</pre>
+    </div>
+
+    <div class="box box-practice">
+      <span class="box-title">✏️ Practice Exercise 4</span>
+      <p>Create a program that manages a simple grade book:</p>
+      <ol>
+        <li>Use a dictionary to store at least 4 student names as keys and their grades (0-100) as values</li>
+        <li>Print all students and their grades</li>
+        <li>Calculate and print the average grade</li>
+        <li>Find and print the student with the highest grade</li>
+        <li>Ask user for a student name and show their grade (use .get() to handle missing names)</li>
+      </ol>
+    </div>
+
+    <!-- Part 7 -->
+    <h2><span class="icon">🛠️</span>Part 7: Functions - Reusable Code Blocks</h2>
+
+    <h3>1. What Are Functions?</h3>
+    <p>Functions are reusable blocks of code that perform specific tasks. Think of them as recipes - write once, use many times!</p>
+
+    <h4>Creating a Function:</h4>
+    <pre># Basic function
+def greet():
+    print("Hello!")
+
+greet()  # Call the function
+# Output: Hello!
+
+# Function with parameters
+def greet_person(name):
+    print(f"Hello, {name}!")
+
+greet_person("Alice")  # Hello, Alice!
+greet_person("Bob")    # Hello, Bob!
+
+# Function with return value
+def add_numbers(a, b):
+    result = a + b
+    return result
+
+sum = add_numbers(5, 3)
+print(sum)  # 8
+
+# You can also return directly
+def multiply(a, b):
+    return a * b
+
+print(multiply(4, 5))  # 20</pre>
+
+    <h3>2. Function Parameters</h3>
+    
+    <h4>Default Parameters:</h4>
+    <pre>def greet(name, greeting="Hello"):
+    print(f"{greeting}, {name}!")
+
+greet("Alice")              # Hello, Alice!
+greet("Bob", "Hi")          # Hi, Bob!
+greet("Charlie", "Hey")     # Hey, Charlie!
+
+# Another example
+def power(base, exponent=2):
+    return base ** exponent
+
+print(power(5))      # 25 (5^2)
+print(power(5, 3))   # 125 (5^3)</pre>
+
+    <h4>Multiple Return Values:</h4>
+    <pre>def get_student_info():
+    name = "Alice"
+    age = 16
+    grade = "A"
+    return name, age, grade  # Returns a tuple
+
+# Unpack the return values
+student_name, student_age, student_grade = get_student_info()
+print(student_name)   # Alice
+print(student_age)    # 16
+print(student_grade)  # A
+
+# Real example: Calculate statistics
+def calculate_stats(numbers):
+    total = sum(numbers)
+    average = total / len(numbers)
+    maximum = max(numbers)
+    minimum = min(numbers)
+    return total, average, maximum, minimum
+
+nums = [10, 20, 30, 40, 50]
+t, avg, mx, mn = calculate_stats(nums)
+print(f"Total: {t}, Average: {avg}, Max: {mx}, Min: {mn}")</pre>
+
+    <h3>3. Variable Scope</h3>
+    <p>Variables created inside functions are <strong>local</strong> - they only exist inside that function:</p>
+    <pre>def my_function():
+    x = 10  # Local variable
+    print(x)
+
+my_function()   # 10
+# print(x)      # ERROR! x doesn't exist outside the function
+
+# Global variable
+y = 20
+
+def another_function():
+    print(y)  # Can access global variable
+
+another_function()  # 20
+
+# Modifying global variables
+count = 0
+
+def increment():
+    global count  # Tell Python we want to modify the global variable
+    count += 1
+
+increment()
+increment()
+print(count)  # 2</pre>
+
+    <div class="box box-remember">
+      <span class="box-title">📌 Best Practice</span>
+      <p>Try to avoid using <code>global</code> variables inside functions. Instead, pass values as parameters and return results. This makes your code easier to understand and debug!</p>
+      <pre># Better approach
+def increment(value):
+    return value + 1
+
+count = 0
+count = increment(count)
+count = increment(count)
+print(count)  # 2</pre>
+    </div>
+
+    <h3>4. Advanced Function Concepts</h3>
+
+    <h4>*args (Variable Number of Arguments):</h4>
+    <pre>def sum_all(*numbers):
+    total = 0
+    for num in numbers:
+        total += num
+    return total
+
+print(sum_all(1, 2, 3))           # 6
+print(sum_all(1, 2, 3, 4, 5))     # 15
+print(sum_all(10, 20))            # 30</pre>
+
+    <h4>**kwargs (Variable Keyword Arguments):</h4>
+    <pre>def print_info(**info):
+    for key, value in info.items():
+        print(f"{key}: {value}")
+
+print_info(name="Alice", age=16, grade="10th")
+# Output:
+# name: Alice
+# age: 16
+# grade: 10th</pre>
+
+    <h4>Lambda Functions (Anonymous Functions):</h4>
+    <pre># Lambda: small, one-line functions
+# Regular function
+def square(x):
+    return x ** 2
+
+# Same thing as lambda
+square = lambda x: x ** 2
+
+print(square(5))  # 25
+
+# Useful with map, filter, sorted
+numbers = [1, 2, 3, 4, 5]
+
+# Map: apply function to each item
+squared = list(map(lambda x: x ** 2, numbers))
+print(squared)  # [1, 4, 9, 16, 25]
+
+# Filter: keep items that meet condition
+evens = list(filter(lambda x: x % 2 == 0, numbers))
+print(evens)  # [2, 4]
+
+# Sorted with custom key
+students = [("Alice", 85), ("Bob", 92), ("Charlie", 78)]
+sorted_students = sorted(students, key=lambda x: x[1], reverse=True)
+print(sorted_students)  # [('Bob', 92), ('Alice', 85), ('Charlie', 78)]</pre>
+
+    <div class="box box-practice">
+      <span class="box-title">✏️ Practice Exercise 5</span>
+      <p>Create a calculator program using functions:</p>
+      <ol>
+        <li>Create functions for: add, subtract, multiply, divide</li>
+        <li>Each function should take two numbers and return the result</li>
+        <li>The divide function should check for division by zero</li>
+        <li>Create a main function that:
+          <ul>
+            <li>Shows a menu of operations</li>
+            <li>Gets two numbers from user</li>
+            <li>Performs the selected operation</li>
+            <li>Displays the result</li>
+          </ul>
+        </li>
+      </ol>
+    </div>
+
+    <!-- Common Mistakes -->
+    <h2><span class="icon">⚠️</span>Common Mistakes & How to Avoid Them</h2>
+
+    <div class="box box-warning">
+      <span class="box-title">1. Confusing = and ==</span>
+      <pre># WRONG
+if x = 5:  # SyntaxError!
+    print("x is 5")
+
+# CORRECT
+if x == 5:  # Comparison
+    print("x is 5")</pre>
+    </div>
+
+    <div class="box box-warning">
+      <span class="box-title">2. Forgetting to Convert input()</span>
+      <pre># WRONG
+age = input("Enter age: ")
+if age >= 18:  # TypeError! Can't compare string with number
+    print("Adult")
+
+# CORRECT
+age = int(input("Enter age: "))
+if age >= 18:
+    print("Adult")</pre>
+    </div>
+
+    <div class="box box-warning">
+      <span class="box-title">3. Index Out of Range</span>
+      <pre>my_list = [1, 2, 3]
+
+# WRONG
+print(my_list[3])  # IndexError! Index 3 doesn't exist
+
+# CORRECT - Check length first
+if len(my_list) > 3:
+    print(my_list[3])
+else:
+    print("Index out of range")
+
+# Or use slicing (safe)
+print(my_list[0:10])  # Returns available items, no error</pre>
+    </div>
+
+    <div class="box box-warning">
+      <span class="box-title">4. Modifying List While Iterating</span>
+      <pre># WRONG
+numbers = [1, 2, 3, 4, 5]
+for num in numbers:
+    if num % 2 == 0:
+        numbers.remove(num)  # Can cause issues!
+
+# CORRECT - Create new list
+numbers = [1, 2, 3, 4, 5]
+odd_numbers = [num for num in numbers if num % 2 != 0]
+print(odd_numbers)  # [1, 3, 5]</pre>
+    </div>
+
+    <div class="box box-warning">
+      <span class="box-title">5. Mutable Default Arguments</span>
+      <pre># WRONG - The list persists across function calls!
+def add_item(item, my_list=[]):
+    my_list.append(item)
+    return my_list
+
+print(add_item(1))  # [1]
+print(add_item(2))  # [1, 2] - Unexpected!
+
+# CORRECT
+def add_item(item, my_list=None):
+    if my_list is None:
+        my_list = []
+    my_list.append(item)
+    return my_list
+
+print(add_item(1))  # [1]
+print(add_item(2))  # [2] - Correct!</pre>
+    </div>
+
+    <div class="box box-warning">
+      <span class="box-title">6. Using 'is' Instead of '=='</span>
+      <pre># 'is' checks if two variables point to the same object in memory
+# '==' checks if the values are equal
+
+a = [1, 2, 3]
+b = [1, 2, 3]
+
+print(a == b)  # True (same content)
+print(a is b)  # False (different objects in memory)
+
+# Use '==' for comparing values
+# Use 'is' for checking None or True/False
+if value is None:
+    print("No value")
+
+if flag is True:
+    print("Flag is true")</pre>
+    </div>
+
+    <!-- Study Tips -->
+    <h2><span class="icon">📚</span>Study Tips & Best Practices</h2>
+
+    <div class="box">
+      <span class="box-title">How to Master Python</span>
+      <ol>
+        <li><strong>Practice Daily:</strong> Even 30 minutes a day is better than 3 hours once a week</li>
+        <li><strong>Type Code Yourself:</strong> Don't just copy-paste. Type every example to build muscle memory</li>
+        <li><strong>Break Problems Down:</strong> Solve complex problems by breaking them into smaller steps</li>
+        <li><strong>Read Error Messages:</strong> They tell you exactly what went wrong and where</li>
+        <li><strong>Use Comments:</strong> Explain what your code does, especially tricky parts</li>
+        <li><strong>Test Frequently:</strong> Run your code often to catch errors early</li>
+        <li><strong>Build Projects:</strong> Create real programs (calculator, quiz game, to-do list)</li>
+        <li><strong>Ask Questions:</strong> No question is too simple. Understanding is more important than pride</li>
+      </ol>
+    </div>
+
+    <div class="box box-example">
+      <span class="box-title">💡 Writing Clean Code</span>
+      <ul>
+        <li><strong>Use meaningful variable names:</strong> <code>student_age</code> not <code>sa</code></li>
+        <li><strong>Keep functions small:</strong> Each function should do one thing well</li>
+        <li><strong>Add comments for complex logic:</strong> Help your future self understand</li>
+        <li><strong>Use consistent indentation:</strong> Always 4 spaces</li>
+        <li><strong>Group related code:</strong> Add blank lines between sections</li>
+      </ul>
+      <pre># Good example
+def calculate_grade(score):
+    """Calculate letter grade from numeric score."""
+    if score >= 90:
+        return "A"
+    elif score >= 80:
+        return "B"
+    elif score >= 70:
+        return "C"
+    elif score >= 60:
+        return "D"
+    else:
+        return "F"
+
+# Get student input
+student_name = input("Enter student name: ")
+student_score = int(input("Enter score (0-100): "))
+
+# Calculate and display grade
+grade = calculate_grade(student_score)
+print(f"{student_name} earned a {grade}")</pre>
+    </div>
+
+    <!-- Quick Reference -->
+    <h2><span class="icon">📖</span>Quick Reference Cheat Sheet</h2>
+
+    <div class="summary-box">
+      <h3>Essential Python Syntax</h3>
+      
+      <h4>Variables & Types</h4>
+      <pre>name = "Alice"          # String
+age = 16                # Integer
+gpa = 3.8               # Float
+is_student = True       # Boolean</pre>
+
+      <h4>Input/Output</h4>
+      <pre>print("Hello")
+name = input("Enter name: ")
+age = int(input("Enter age: "))</pre>
+
+      <h4>Operators</h4>
+      <pre>+  -  *  /  //  %  **    # Math
+==  !=  >  <  >=  <=     # Comparison
+and  or  not             # Logical</pre>
+
+      <h4>Conditionals</h4>
+      <pre>if condition:
+    # code
+elif other_condition:
+    # code
+else:
+    # code</pre>
+
+      <h4>Loops</h4>
+      <pre># While loop
+while condition:
+    # code
+
+# For loop
+for item in sequence:
+    # code
+    
+for i in range(5):
+    # code</pre>
+
+      <h4>Data Structures</h4>
+      <pre>my_list = [1, 2, 3]
+my_tuple = (1, 2, 3)
+my_set = {1, 2, 3}
+my_dict = {"key": "value"}</pre>
+
+      <h4>Functions</h4>
+      <pre>def function_name(parameter):
+    # code
+    return result
+
+result = function_name(argument)</pre>
+
+      <h4>Common Methods</h4>
+      <pre># String
+.upper()  .lower()  .strip()  .split()  .replace()
+
+# List
+.append()  .remove()  .pop()  .sort()  .reverse()
+
+# Dictionary
+.keys()  .values()  .items()  .get()</pre>
+    </div>
+
+    <!-- Final Exercise -->
+    <h2><span class="icon">🎯</span>Final Challenge Project</h2>
+
+    <div class="box box-practice">
+      <span class="box-title">🏆 Create a Student Management System</span>
+      <p>Build a complete program that demonstrates everything you've learned:</p>
+      
+      <h4>Requirements:</h4>
+      <ol>
+        <li><strong>Store student data</strong> in a dictionary (name, age, grades list)</li>
+        <li><strong>Menu system</strong> with options:
+          <ul>
+            <li>Add new student</li>
+            <li>View all students</li>
+            <li>Calculate student's average grade</li>
+            <li>Find student with highest average</li>
+            <li>Exit program</li>
+          </ul>
+        </li>
+        <li><strong>Use functions</strong> for each operation</li>
+        <li><strong>Input validation</strong> (check for valid grades, handle errors)</li>
+        <li><strong>Use loops</strong> to keep program running until user exits</li>
+        <li><strong>Format output</strong> nicely using f-strings</li>
+      </ol>
+
+      <h4>Bonus Features:</h4>
+      <ul>
+        <li>Save data to a file (research file operations)</li>
+        <li>Search for student by name</li>
+        <li>Remove a student</li>
+        <li>Sort students by average grade</li>
+      </ul>
+
+      <p><strong>This project will help you:</strong> Practice everything from variables to functions, apply problem-solving skills, and build confidence in Python!</p>
+    </div>
+
+    <!-- Conclusion -->
+    <h2><span class="icon">🎓</span>Conclusion</h2>
+
+    <p>
+      Congratulations on working through this Python study guide! You've learned the fundamentals that will serve as the foundation for all your future programming. Remember:
+    </p>
+
+    <ul>
+      <li>✅ Programming is a skill that improves with practice</li>
+      <li>✅ Making mistakes is part of learning - errors teach you</li>
+      <li>✅ Break complex problems into smaller, manageable pieces</li>
+      <li>✅ Google and documentation are your friends</li>
+      <li>✅ Build real projects to solidify your understanding</li>
+    </ul>
+
+    <div class="box">
+      <span class="box-title">📌 Next Steps</span>
+      <ol>
+        <li>Complete all practice exercises in this guide</li>
+        <li>Build the final challenge project</li>
+        <li>Explore Python libraries (pygame for games, pandas for data, flask for web)</li>
+        <li>Join coding communities (Reddit r/learnpython, Stack Overflow)</li>
+        <li>Work on personal projects that interest you</li>
+      </ol>
+      <p><strong>Remember:</strong> Every expert programmer was once a beginner. Keep coding, keep learning, and don't give up!</p>
+    </div>
+
+    <div style="text-align: center; margin-top: 40px; padding: 20px; border-top: 2px solid #2c3e50;">
+      <p style="font-size: 12pt; color: #566573;">
+        <strong>Happy Coding! 🐍💻</strong><br>
+        <em>Keep this guide handy as you continue your Python journey</em>
+      </p>
+    </div>
+
+</body>
+</html>
